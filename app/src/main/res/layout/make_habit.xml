@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:id="@+id/make_habit"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:text="Track a new Habit"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:fontFamily="sans-serif"
+        android:textSize="22sp"
+        android:textAlignment="center" />
+
+    <EditText
+        android:id="@+id/habitName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:hint="What do you want to make a habit?" />
+    <Switch
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:textSize="18sp"
+        android:paddingStart="5dp"
+        android:paddingEnd="0dp"
+        android:text="@string/sunday"
+        android:checked="false"
+        android:id="@+id/Sunday" />
+
+    <Switch
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:textSize="18sp"
+        android:paddingStart="5dp"
+        android:paddingEnd="0dp"
+        android:text="@string/monday"
+        android:checked="false"
+        android:id="@+id/Monday" />
+
+    <Switch
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:textSize="18sp"
+        android:paddingStart="5dp"
+        android:paddingEnd="0dp"
+        android:text="@string/tuesday"
+        android:checked="false"
+        android:id="@+id/Tuesday" />
+
+    <Switch
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:textSize="18sp"
+        android:paddingStart="5dp"
+        android:paddingEnd="0dp"
+        android:text="Wednesday"
+        android:checked="false"
+        android:id="@+id/Wednesday" />
+    <Switch
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:textSize="18sp"
+        android:paddingStart="5dp"
+        android:paddingEnd="0dp"
+        android:text="@string/thursday"
+        android:checked="false"
+        android:id="@+id/Thursday" />
+    <Switch
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:textSize="18sp"
+        android:paddingStart="5dp"
+        android:paddingEnd="0dp"
+        android:text="@string/friday"
+        android:id="@+id/Friday" />
+    <Switch
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:textSize="18sp"
+        android:paddingStart="5dp"
+        android:paddingEnd="0dp"
+        android:text="@string/saturday"
+        android:checked="false"
+        android:id="@+id/Saturday" />
+    <Button
+        android:id="@+id/done"
+        android:layout_width="80dp"
+        android:layout_height="60dp"
+        android:text="Done"
+        android:layout_gravity="center_horizontal"/>
+</LinearLayout>

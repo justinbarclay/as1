@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/habitTracker"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:weightSum="1">
+
+    <TextView
+        android:id="@+id/habit_header"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="@string/todayHeader"
+        android:layout_margin="@dimen/activity_horizontal_margin"
+        android:padding="5dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+        android:textAlignment="center" />
+
+    <ListView
+        android:id="@+id/list_habits"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:layout_weight="0.64"
+        android:scrollbarStyle="outsideOverlay"
+        android:fadeScrollbars="false">
+    </ListView>
+    <Button
+        android:id="@+id/add_habit_button"
+        android:layout_width="100dp"
+        android:layout_height="32dp"
+        android:layout_gravity="center_horizontal"
+        android:textSize="12sp"
+        android:text="@string/addHabitButton"
+        style="@android:style/Widget.DeviceDefault.Light.Button.Inset" />
+
+    <Button
+        android:text="@string/allHabits"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/allHabits"
+        android:layout_gravity="center_horizontal"
+        android:textSize="13sp"
+        style="@android:style/Widget.DeviceDefault.Light.Button.Inset" />
+
+</LinearLayout>

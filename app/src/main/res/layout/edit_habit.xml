@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:app="HabitTracker"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:id="@+id/edit_habit"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:orientation="vertical" android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/test"
+        android:columnCount="3"
+        android:columnOrderPreserved="true">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="@string/edit_your_habit"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:fontFamily="sans-serif"
+            android:textSize="22sp"
+            android:textAlignment="center" />
+
+        <EditText
+            android:id="@+id/habitName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:inputType="textPersonName"
+            android:textSize="20sp"
+            android:ems="10"
+            android:hint="@string/habit_name_hint" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="5dp"
+            android:textSize="18sp"
+            android:textColor="#000"
+            android:id="@+id/createdOn"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="5dp"
+            android:textSize="15sp"
+            android:paddingBottom="10dp"
+            android:id="@+id/completions"
+            android:paddingLeft="5dp"/>
+
+
+        <Switch
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:textSize="18sp"
+            android:paddingStart="5dp"
+            android:paddingEnd="0dp"
+            android:text="@string/sunday"
+            android:checked="false"
+            android:id="@+id/Sunday" />
+
+        <Switch
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:textSize="18sp"
+            android:paddingStart="5dp"
+            android:paddingEnd="0dp"
+            android:text="@string/monday"
+            android:checked="false"
+            android:id="@+id/Monday" />
+
+        <Switch
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:textSize="18sp"
+            android:paddingStart="5dp"
+            android:paddingEnd="0dp"
+            android:text="@string/tuesday"
+            android:checked="false"
+            android:id="@+id/Tuesday" />
+
+        <Switch
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:textSize="18sp"
+            android:paddingStart="5dp"
+            android:paddingEnd="0dp"
+            android:text="Wednesday"
+            android:checked="false"
+            android:id="@+id/Wednesday" />
+        <Switch
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:textSize="18sp"
+            android:paddingStart="5dp"
+            android:paddingEnd="0dp"
+            android:text="@string/thursday"
+            android:checked="false"
+            android:id="@+id/Thursday" />
+        <Switch
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:textSize="18sp"
+            android:paddingStart="5dp"
+            android:paddingEnd="0dp"
+            android:text="@string/friday"
+            android:id="@+id/Friday" />
+        <Switch
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:textSize="18sp"
+            android:paddingStart="5dp"
+            android:paddingEnd="0dp"
+            android:text="@string/saturday"
+            android:checked="false"
+            android:id="@+id/Saturday" />
+        <Button
+            android:text="@string/history"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_gravity="center_horizontal"
+            android:id="@+id/viewHistory" />
+
+        <Button
+            android:id="@+id/done"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/save"
+            style="@style/Widget.AppCompat.Button" />
+
+        <Button
+            android:id="@+id/delete"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/delete"
+            style="@style/Widget.AppCompat.Button" />
+    </LinearLayout>
+</ScrollView>
