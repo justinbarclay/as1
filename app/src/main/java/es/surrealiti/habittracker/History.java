@@ -38,7 +38,6 @@ public class History extends AppCompatActivity {
         save = (Button) findViewById(R.id.save);
         historyContainer = (ListView) findViewById(R.id.history);
         history = (ArrayList<Date>) getIntent().getSerializableExtra("history");
-        System.out.println(history);
 
         historyAdapter = new ArrayAdapter<Date>(this, R.layout.history_item, history);
         historyContainer.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener(){

@@ -166,6 +166,7 @@ public class EditHabit extends AppCompatActivity {
             Snackbar snackbar = Snackbar.make(findViewById(R.id.edit_habit), R.string.noName, Snackbar.LENGTH_SHORT);
             snackbar.show();
         } else {
+            habit.setName(name.getText().toString());
             Intent intent = new Intent();
             intent.putExtra("delete", false);
             intent.putExtra("Habit", habit);
