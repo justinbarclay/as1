@@ -1,4 +1,5 @@
 Demo video: https://vimeo.com/185284275
+Demo video alt location: https://youtu.be/HSllAIQpwcE
 
 For a complete look at the build setup for this app please go to: https://github.com/justinbarclay/HabitTracker
 
