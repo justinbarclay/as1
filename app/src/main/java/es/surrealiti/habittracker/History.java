@@ -14,6 +14,16 @@ import android.widget.ListView;
 import java.util.ArrayList;
 import java.util.Date;
 
+/**
+ * Created by Justin Barclay 2016
+ * The purpose of this activity is to manage and view a completion history for a particular habit.
+ *   I needed a specific activity to manage history because have a scrollable view and a listview
+ *   broke android.
+ *   Areas for improvement:
+ *   - Make it more apparent that a long click is needed to delete
+ *   - Prompt to confirm delete
+ *
+ */
 public class History extends AppCompatActivity {
         private ArrayList<Date> history;
         private ListView historyContainer;
@@ -36,7 +46,6 @@ public class History extends AppCompatActivity {
             public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
                 setResult(RESULT_OK);
 
-                System.out.println(history.get(position).toString());
                 historyAdapter.remove(history.get(position));
                 Snackbar snackbar = Snackbar.make(findViewById(R.id.history), R.string.removeHistory, Snackbar.LENGTH_SHORT);
                 snackbar.show();

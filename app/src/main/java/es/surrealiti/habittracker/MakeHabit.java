@@ -14,9 +14,11 @@ import android.widget.Switch;
 import android.widget.ToggleButton;
 
 /**
- * Created by Justin on 2016-09-25.
- * This controls the view for initializing new habits. This view is distinct from EditHabit
- * As it's purpose is much simpler.
+ * Created by Justin Barclay 2016
+ * This activity is meant for initializing new habits.
+ * This view is distinct from EditHabit as it's requirements are much simple and does not need as
+ * many UI elements as EditHabit.
+ *
  */
 
 public class MakeHabit extends AppCompatActivity {

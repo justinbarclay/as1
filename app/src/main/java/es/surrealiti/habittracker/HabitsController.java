@@ -18,7 +18,10 @@ import java.util.ArrayList;
 import java.util.Observable;
 
 /**
- * Created by Justin on 2016-10-02.
+ * Created by Justin Barclay 2016
+ * This is the main way for the view to interact with the underlying data model of HabitList.
+ * It is able to load and save the habitlists into the file system, or update the underlying
+ * HabitList in a number of ways.
  */
 
 public class HabitsController {

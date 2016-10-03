@@ -16,9 +16,13 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 import java.util.Date;
-/*  This is the entry point to the program.
-* It controls the views for any list of habits, as well as, it marshals
-* the creation of new habits or, editing/deleting of old habits.
+/**
+ * This is the entry point to the program.
+ * It controls the views for any list of habits, as well as, it marshals
+ * the creation of new habits or, editing/deleting of old habits. As well
+ * it is the only point in the program where changes are saved. IE
+ * If a habit is half edited its state should not be saved as we don't know
+ * the users is done or is sure of the change.
  *
  */
 public class MainView extends AppCompatActivity {
@@ -77,7 +81,6 @@ public class MainView extends AppCompatActivity {
         habitsContainer.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener(){
             @Override
             public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
-                System.out.println(habitsContainer.getChildCount());
                 setResult(RESULT_OK);
                 view.setBackgroundColor(Color.rgb(101, 207, 45));
                 Snackbar snackbar = Snackbar.make(findViewById(R.id.habitTracker), R.string.completeHabit, Snackbar.LENGTH_SHORT);
@@ -169,15 +172,13 @@ public class MainView extends AppCompatActivity {
             }
             if (resultCode == Activity.RESULT_CANCELED) {
                 //Write your code if there's no result
-                throw new RuntimeException();
+                // Do nothing
             }
         } else if(requestCode == 2){
             if(resultCode == Activity.RESULT_OK){
                 Habit habit= (Habit) data.getParcelableExtra("Habit");
                 Boolean delete = data.getBooleanExtra("delete", false);
-                System.out.println("Delete? " + delete);
                 if(delete){
-                    System.out.println("Calling maincontroller");
                     mainController.removeHabit(habit);
                 } else {
                     mainController.updateHabitList(habit);
@@ -187,7 +188,7 @@ public class MainView extends AppCompatActivity {
             }
             if (resultCode == Activity.RESULT_CANCELED) {
                 //Write your code if there's no result
-                throw new RuntimeException();
+                //do nothing
             }
         }
     }

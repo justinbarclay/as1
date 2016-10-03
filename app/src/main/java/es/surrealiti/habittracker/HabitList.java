@@ -7,7 +7,9 @@ import java.util.Date;
 import static android.provider.Telephony.Mms.Part.FILENAME;
 
 /**
- * Created by Justin on 2016-10-02.
+ * Created by Justin Barclay 2016
+ * HabitList was created as a way to easily model a list of habits and give us easy means to find
+ * or remove specific habits from lists.
  */
 
 public class HabitList {
