@@ -24,6 +24,10 @@ import java.util.Locale;
  * EditHabit controls the view and manipulation of local state for all activities relating to
  * editing a habit, except for editing histories. Editing history has been put out to it's own
  * view as having scrolling views and ListItems really messes with Android.
+ *
+ * Area of Improvement:
+ * - One area of improvement is to make it more apparent that you can click the "Created On" button
+ *   Thus allowing for the created date to be changed
  */
 
 public class EditHabit extends AppCompatActivity {
@@ -46,8 +50,6 @@ public class EditHabit extends AppCompatActivity {
     private Button historyButton;
     private Button doneButton;
     private Button deleteButton;
-
-    private final int DELETE = 535;
 
     DatePickerDialog.OnDateSetListener date;
 
@@ -76,12 +78,13 @@ public class EditHabit extends AppCompatActivity {
 
         createdOn = (TextView) findViewById(R.id.createdOn);
         myCalendar = Calendar.getInstance();
+
+        // https://developer.android.com/guide/topics/ui/controls/pickers.html
         date = new DatePickerDialog.OnDateSetListener() {
 
             @Override
             public void onDateSet(DatePicker view, int year, int monthOfYear,
                                   int dayOfMonth) {
-                // TODO Auto-generated method stub
                 myCalendar.set(Calendar.YEAR, year);
                 myCalendar.set(Calendar.MONTH, monthOfYear);
                 myCalendar.set(Calendar.DAY_OF_MONTH, dayOfMonth);
@@ -92,7 +95,6 @@ public class EditHabit extends AppCompatActivity {
         createdOn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // TODO Auto-generated method stub
                 new DatePickerDialog(EditHabit.this, date, myCalendar
                         .get(Calendar.YEAR), myCalendar.get(Calendar.MONTH),
                         myCalendar.get(Calendar.DAY_OF_MONTH)).show();

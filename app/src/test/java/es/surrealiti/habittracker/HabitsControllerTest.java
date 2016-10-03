@@ -7,7 +7,6 @@ import org.junit.Test;
  */
 
 public class HabitsControllerTest {
-    // Can't test HabitsController load or save file
-    // and consequently can't test the rest of
-    // HabitsController
+    // Can't test HabitsController because I can't use context load or save file
+    // and consequently can't test the rest of HabitsController
 }
